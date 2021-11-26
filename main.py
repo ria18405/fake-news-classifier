@@ -1,19 +1,19 @@
 from flask import Flask, render_template, request, send_from_directory
 # import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
+# import pandas as pd
+# import matplotlib.pyplot as plt
 import nltk
 import re
 import nltk
-import string
+# import string
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer, PorterStemmer
 # import torch
-from textblob import TextBlob, Word, Blobber
+# from textblob import TextBlob, Word, Blobber
 # import plotly.express as px
 import pickle
-from tqdm.notebook import tqdm, trange
-from autocorrect import Speller
+# from tqdm.notebook import tqdm, trange
+# from autocorrect import Speller
 # from sklearn.naive_bayes import MultinomialNB
 from sklearn.svm import SVC
 from tensorflow.keras.preprocessing.text import one_hot
@@ -21,9 +21,9 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 app = Flask('__name__',template_folder='templates')
 
-from tqdm.notebook import tqdm, trange
-from nltk.stem import PorterStemmer
-from autocorrect import Speller
+# from tqdm.notebook import tqdm, trange
+# from nltk.stem import PorterStemmer
+# from autocorrect import Speller
 from autocorrect import Speller
 
 spell = Speller(lang='en')
