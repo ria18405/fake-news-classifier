@@ -15,7 +15,7 @@ import pickle
 # from tqdm.notebook import tqdm, trange
 # from autocorrect import Speller
 # from sklearn.naive_bayes import MultinomialNB
-from sklearn.svm import SVC
+# from sklearn.svm import SVC
 from tensorflow.keras.preprocessing.text import one_hot
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
