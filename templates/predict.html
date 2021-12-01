@@ -1,0 +1,76 @@
+<style type="text/css">
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.centertextarea {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: Black;
+  color: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.header {
+  text-align: center;
+  padding: 3px;
+  background-color: Black;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+</style>
+
+<script type="text/javascript">
+   function clearFunction(){
+     document.getElementById('newsTextInputForm').value = "";
+     document.getElementById('authorInputForm').value = "";
+     document.getElementById('titleInputForm').value = "";
+}; 
+   function loadSampleFunction(){
+     document.getElementById('newsTextInputForm').value = "Videos 15 Civilians Killed In Single US Airstrike Have Been Identified The rate at which civilians are being killed by American airstrikes in Afghanistan is now higher than it was in 2014 when the US was engaged in active combat operations.   Photo of Hellfire missiles being loaded onto a US military Reaper drone in Afghanistan by Staff Sgt. Brian Ferguson/U.S. Air Force. The Bureau has been able to identify 15 civilians killed in a single US drone strike in Afghanistan last month – the biggest loss of civilian life in one strike since the attack on the Medecins Sans Frontieres hospital (MSF) last October. The US claimed it had conducted a “counter-terrorism” strike against Islamic State (IS) fighters when it hit Nangarhar province with missiles on September 28. But the next day the United Nations issued an unusually rapid and strong statement saying the strike had killed 15 civilians and injured 13 others who had gathered at a house to celebrate a tribal elder’s return from a pilgrimage to Mecca. The Bureau spoke to a man named Haji Rais who said he was the owner of the house that was targeted. He said 15 people were killed and 19 others injured, and provided their names (listed below). The Bureau was able to independently verify the identities of those who died. Rais’ son, a headmaster at a local school, was among them. Another man, Abdul Hakim, lost three of his sons in the attack. Rais said he had no involvement with IS and denied US claims that IS members had visited his house before the strike. He said: “I did not even speak to those sort of people on the phone let alone receiving them in my house.” The deaths amount to the biggest confirmed loss of civilian life in a single American strike in Afghanistan since the attack on the MSF hospital in Kunduz last October, which killed at least 42 people. The Nangarhar strike was not the only US attack to kill civilians in September. The Bureau’s data indicates that as many as 45 civilians and allied soldiers were killed in four American strikes in Afghanistan and Somalia that month. On September 18 a pair of strikes killed eight Afghan policemen in Tarinkot, the capital of Urozgan provice. US jets reportedly hit a police checkpoint, killing one officer, before returning to target first responders. The use of this tactic – known as a “double-tap” strike – is controversial because they often hit civilian rescuers. The US told the Bureau it had conducted the strike against individuals firing on and posing a threat to Afghan forces. The email did not directly address the allegations of Afghan policemen being killed. At the end of the month in Somalia, citizens burnt US flags on the streets of the north-central city of Galcayo after it emerged a drone attack may have unintentionally killed 22 Somali soldiers and civilians. The strike occurred on the same day as the one in Nangarhar. In both the Somali and Afghan incidents, the US at first denied that any non-combatants had been killed. It is now investigating both the strikes in Nangarhar and Galcayo. The rate at which civilians are being killed by American airstrikes in Afghanistan is now higher than it was in 2014 when the US was engaged in active combat operations. Name";
+     document.getElementById('authorInputForm').value = "Jessica Purkiss";
+     document.getElementById('titleInputForm').value = "15 Civilians Killed In Single US Airstrike Have Been Identified";
+};
+</script>
+
+<div id = "heading" class = "header">
+    <h1> FAKE NEWS CLASSIFICATION TOOL</h1>
+</div>
+<div id="newsInfoInputForm" align = "center">
+    <br><br><br><br><br><br>
+    <form action="{{ url_for('predict_') }}" method="post", onsubmit="return onsubmitform();">
+        <h3>
+            Enter News Article Information
+        </h3> <br>
+        <textarea id="titleInputForm" class = "centertextarea" name="titleInputForm" cols="50" rows="5" placeholder="Enter Title of News Article (Optional)" style="border:solid 1px;"></textarea>
+
+        <textarea id="newsTextInputForm" name="newsTextInputForm" cols="100" rows="20" placeholder="Enter News Article Text" style="border:solid 1px;" required></textarea> 
+
+        <textarea id="authorInputForm" class = "centertextarea" name="authorInputForm" cols="50" rows="5" placeholder="Enter Author name (Optional)" style="border:solid 1px;" ></textarea>
+        <br><br>
+        <input type="submit" class = "btn-primary" value="Detect fake news" >
+    </form>
+    <button onClick="loadSampleFunction();">Load Sample Input</button>
+    <button onClick="clearFunction();">Clear Input</button>
+</div>
+
+<footer>
+  <p>Prakriti Garg 2019439,   Ria Gupta 2018405,  Ruhma Mehek Khan 2018362 </a></p>
+</footer>
+
+{% block content %}
+    {% if results_computed %}
+        <h4><center> This news article is classified as a {{result[0]}}</center></h4>
+    {% endif %}
+{% endblock %} 
