@@ -92,5 +92,5 @@ This project has been completed as a course project of CSE556: [Natural Language
 
 ## Report & Slides 
 
-[Presentation Slides](https://github.com/ria18405/fake-news-classifier/Presentation\ Slides.pdf)
-[Project Report](https://github.com/ria18405/fake-news-classifier/Report.pdf)
+[Presentation Slides](https://github.com/ria18405/fake-news-classifier/blob/deployed_version/Presentation%20Slides.pdf)
+[Project Report](https://github.com/ria18405/fake-news-classifier/blob/deployed_version/Report.pdf)
