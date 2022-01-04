@@ -9,9 +9,9 @@ This project aims to build a fake news classifier that can accurately distinguis
 
 ## Abstract:
    * The advent of technology and the development of social media platforms has made it easier to share news updates with the masses.
-    * The effects of fake news can be catastrophic.
-    * Fact checking can prevent people from reacting and taking action on fake news.
-    * Extremely useful for news houses to fact-check their news before they share it with the masses.
+   * The effects of fake news can be catastrophic.
+   * Fact checking can prevent people from reacting and taking action on fake news.
+   * Extremely useful for news houses to fact-check their news before they share it with the masses.
 
 ## Procedure:
 
@@ -93,4 +93,5 @@ This project has been completed as a course project of CSE556: [Natural Language
 ## Report & Slides 
 
 [Presentation Slides](https://github.com/ria18405/fake-news-classifier/blob/deployed_version/Presentation%20Slides.pdf)
+
 [Project Report](https://github.com/ria18405/fake-news-classifier/blob/deployed_version/Report.pdf)
